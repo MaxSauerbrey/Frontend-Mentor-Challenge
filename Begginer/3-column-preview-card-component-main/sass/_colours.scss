@@ -2,3 +2,4 @@
 @use 'sass:map';
 $primary_colours: ("primary":hsl(31, 77%, 52%), "secondary":hsl(184, 100%, 22%), "tertiary":hsl(179, 100%, 13%));
 $neutral_colours: ("paragraphs":hsla(0, 0%, 100%, 0.75), "background-headings-buttons":hsl(0, 0%, 95%));
+$colour_list: hsl(31, 77%, 52%) hsl(184, 100%, 22%) hsl(179, 100%, 13%);

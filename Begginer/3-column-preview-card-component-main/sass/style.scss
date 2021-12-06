@@ -1,57 +1,114 @@
-@import 'variables.scss';
-@import 'functions.scss';
-@import 'colours.scss';
-html {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-// html,
-// body {
-// height: 99%;
-// }
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: thin solid red;
-    margin: 0;
-}
-
-.cards {
-    display: flex;
-    flex-direction: column;
-    margin: 4rem 0 4rem;
-    border-radius: 1rem;
-}
-
-.card {
-    width: 16rem;
-    height: 25rem;
-    padding: 3rem;
-    // flex-basis: 33%;
-    &:nth-child(1) {
-        border-top-right-radius: 0.5rem;
-        border-top-left-radius: 0.5rem;
-    }
-    &:nth-child(3) {
-        border-bottom-right-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem;
-    }
-    h1 {
-        margin: 3rem auto 2rem;
-    }
-}
-
-@each $clave,
-$colour in $primary_colours {
-    .#{$clave} {
-        background-color: $colour;
-    }
-}
+            @use 'sass:map';
+            @use 'sass:list';
+            @import 'variables.scss';
+            @import 'functions.scss';
+            @import 'colours.scss';
+            html {
+                box-sizing: border-box;
+                margin: 0;
+                scroll-behavior: smooth;
+            }
+            
+            *,
+            *:before,
+            *:after {
+                box-sizing: inherit;
+            }
+            
+            // html,
+            // body {
+            // height: 99%;
+            // }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // border: thin solid red;
+                margin: 0;
+            }
+            
+            .cards {
+                display: flex;
+                flex-direction: column;
+                margin: 4rem 4rem;
+                border-radius: 1rem;
+            }
+            
+            .card {
+                width: 16rem;
+                height: 25rem;
+                padding: 3rem;
+                &:nth-child(1) {
+                    border-top-right-radius: 0.5rem;
+                    border-top-left-radius: 0.5rem;
+                }
+                &:nth-child(3) {
+                    border-bottom-right-radius: 0.5rem;
+                    border-bottom-left-radius: 0.5rem;
+                }
+                h1 {
+                    margin: 2rem auto 1rem;
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    color: map.get($neutral-colours, "background-headings-buttons")
+                }
+            }
+            
+            @each $clave,
+            $colour in $primary_colours {
+                .#{$clave} {
+                    background-color: $colour;
+                }
+            }
+            
+            ///Buttons style
+            .btn {
+                background-color: map.get($neutral-colours, "background-headings-buttons");
+                margin: thin solid map.get($neutral_colours, "background-headings-buttons");
+                text-align: center;
+                padding: 1rem 0.1rem;
+                border-radius: 2rem;
+                width: pixelsToRems(140px);
+                cursor: pointer;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.8rem;
+                // @for $i from 1 to 4 {
+                //     &:nth-child(#{$i}) {
+                //         @if($i==1) {
+                //             background-color: list.nth($colour_list, 1);
+                //         }
+                //         @else {
+                //             @if($i==2) {
+                //                 color: list.nth($colour_list, 2);
+                //             }
+                //             @else {
+                //                 color: list.nth($colour_list, 3);
+                //             }
+                //         }
+                //     }
+                // }
+            }
+            
+            //! Revisar nth:child
+            .sedan-btn {
+                color: map.get($primary_colours, "primary");
+            }
+            
+            .suvs-btn {
+                color: map.get($primary_colours, "secondary");
+            }
+            
+            .luxury-btn {
+                color: map.get($primary_colours, "tertiary");
+            }
+            
+            .paragraph {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.8rem;
+                line-height: 1.4rem;
+                color: map.get($neutral-colours, "paragraphs");
+                margin-bottom: 1.5rem;
+            }
+            
+            //
