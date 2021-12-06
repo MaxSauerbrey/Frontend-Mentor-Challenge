@@ -1,1 +1,56 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: thin solid red;
+  margin: 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 4rem;
+  border-radius: 1rem;
+}
+
+.card {
+  width: 16rem;
+  height: 25rem;
+  padding: 3rem;
+}
+.card:nth-child(1) {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.card:nth-child(3) {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.card h1 {
+  margin: 3rem auto 2rem;
+}
+
+.primary {
+  background-color: #e38826;
+}
+
+.secondary {
+  background-color: #006970;
+}
+
+.tertiary {
+  background-color: #004241;
+}
+
 /*# sourceMappingURL=style.css.map */

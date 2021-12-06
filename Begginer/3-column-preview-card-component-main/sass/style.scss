@@ -34,6 +34,7 @@ body {
 .card {
     width: 16rem;
     height: 25rem;
+    padding: 3rem;
     // flex-basis: 33%;
     &:nth-child(1) {
         border-top-right-radius: 0.5rem;
@@ -42,6 +43,9 @@ body {
     &:nth-child(3) {
         border-bottom-right-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
+    }
+    h1 {
+        margin: 3rem auto 2rem;
     }
 }
 
