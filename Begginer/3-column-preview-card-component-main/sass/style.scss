@@ -93,14 +93,30 @@
             //! Revisar nth:child
             .sedan-btn {
                 color: map.get($primary_colours, "primary");
+                &:hover {
+                    background-color: map.get($primary_colours, "primary");
+                    color: map.get($neutral-colours, "background-headings-buttons");
+                    border: thin solid map.get($neutral-colours, "background-headings-buttons")
+                }
             }
             
             .suvs-btn {
                 color: map.get($primary_colours, "secondary");
+                &:hover {
+                    background-color: map.get($primary_colours, "secondary");
+                    color: map.get($neutral-colours, "background-headings-buttons");
+                    border: thin solid map.get($neutral-colours, "background-headings-buttons")
+                }
             }
             
             .luxury-btn {
                 color: map.get($primary_colours, "tertiary");
+                margin-bottom: 4rem;
+                &:hover {
+                    background-color: map.get($primary_colours, "tertiary");
+                    color: map.get($neutral-colours, "background-headings-buttons");
+                    border: thin solid map.get($neutral-colours, "background-headings-buttons")
+                }
             }
             
             .paragraph {
@@ -109,6 +125,10 @@
                 line-height: 1.4rem;
                 color: map.get($neutral-colours, "paragraphs");
                 margin-bottom: 1.5rem;
+            }
+            
+            .lux-p {
+                margin-bottom: 0.5rem;
             }
             
             //
