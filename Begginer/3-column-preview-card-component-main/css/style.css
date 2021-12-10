@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* box sizing */
 html {
   box-sizing: border-box;
-  margin: 0;
   scroll-behavior: smooth;
 }
 
@@ -11,42 +13,49 @@ html {
 }
 
 body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  width: 97vw;
   display: flex;
+  overflow-y: scroll;
   justify-content: center;
+  overflow-x: auto;
   align-items: center;
-  margin: 0;
+  height: 99vh;
+  flex-wrap: wrap;
 }
 
+/* style cards */
 .cards {
   display: flex;
   flex-direction: column;
-  margin: 4rem 4rem;
-  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  border-radius: 0.4375rem;
+  position: relative;
+  right: 0.2rem;
 }
 
 .card {
-  width: 16rem;
-  height: 25rem;
-  padding: 3rem;
-}
-.card:nth-child(1) {
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-.card:nth-child(3) {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+  width: 18.75rem;
+  height: 30rem;
+  padding: 2.625rem;
+  position: relative;
 }
 .card h1 {
-  margin: 2rem auto 1rem;
+  margin: 2rem auto 2rem;
   font-family: "Big Shoulders Display", cursive;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: #f2f2f2;
 }
 
 .primary {
   background-color: #e38826;
+  border-top-right-radius: 0.4375rem;
+  border-top-left-radius: 0.4375rem;
 }
 
 .secondary {
@@ -55,6 +64,14 @@ body {
 
 .tertiary {
   background-color: #004241;
+  border-bottom-right-radius: 0.4375rem;
+  border-bottom-left-radius: 0.4375rem;
+}
+
+.sedan-icon,
+.suvs-icon,
+.lux-icon {
+  margin-bottom: 2.25rem;
 }
 
 .btn {
@@ -65,48 +82,105 @@ body {
   border-radius: 2rem;
   width: 8.75rem;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 0.8rem;
+  margin-top: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: transparent;
+  border: thin solid #f2f2f2;
 }
 
 .sedan-btn {
   color: #e38826;
 }
 .sedan-btn:hover {
-  background-color: #e38826;
   color: #f2f2f2;
-  border: thin solid #f2f2f2;
 }
 
 .suvs-btn {
   color: #006970;
 }
 .suvs-btn:hover {
-  background-color: #006970;
   color: #f2f2f2;
-  border: thin solid #f2f2f2;
 }
 
 .luxury-btn {
   color: #004241;
-  margin-bottom: 4rem;
 }
 .luxury-btn:hover {
-  background-color: #004241;
   color: #f2f2f2;
-  border: thin solid #f2f2f2;
 }
 
+/* Style Paragraph */
 .paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.4rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1.5rem;
 }
 
-.lux-p {
-  margin-bottom: 0.5rem;
+/* Style footer */
+.attribution {
+  width: 99%;
+  margin: 0 auto;
+  position: relative;
+  color: #999;
+  padding-bottom: 10px;
+  bottom: 10px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+.attribution a:hover {
+  color: #000;
+}
+
+/* style tablet and mobile */
+@media only screen and (min-width: 65.3333333333em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 99vw;
+    justify-content: center;
+    overflow: hidden;
+    overflow-x: auto;
+    align-items: center;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 4rem;
+  }
+
+  .cards .card {
+    border-radius: 0rem;
+  }
+  .cards .sedand-card {
+    border-top-left-radius: 0.4375rem;
+    border-bottom-left-radius: 0.4375rem;
+  }
+  .cards .lux-card {
+    border-top-right-radius: 0.4375rem;
+    border-bottom-right-radius: 0.4375rem;
+  }
+
+  .attribution {
+    position: absolute;
+    width: 99%;
+    bottom: 10px;
+    line-height: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
